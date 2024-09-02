@@ -29,5 +29,7 @@ public class Board {
 		this.coluns = coluns;
 	}
 		
-	
+	public Piece piece(int row, int column) {
+		return pieces[row][column];
+	}
 }
