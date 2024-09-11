@@ -54,7 +54,7 @@ public class Board {
 	}
 	
 	public boolean therIsAPiece(Position position) {
-		if(!positionExists(row, column)) {
+		if(!positionExists(position)) {
 			throw new BoardExeption("Position not on the board");
 		}
 		return piece(position) != null;
