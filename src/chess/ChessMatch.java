@@ -1,6 +1,7 @@
 package chess;
 
 import boardgame.Board;
+import boardgame.BoardException;
 import boardgame.Piece;
 import boardgame.Position;
 import chess.pieces.King;
@@ -9,7 +10,6 @@ import chess.pieces.Rook;
 public class ChessMatch {
 
 	private Board board;
-	
 	public ChessMatch() {
 	board = new Board(8, 8);
 	initialSetup();
@@ -43,7 +43,7 @@ public class ChessMatch {
 	
 	private void ValidateSourcePosition(Position position) {
 		if(!board.therIsAPiece(position)) {
-			throw new ChessException("there is no piece on source position");
+			throw new BoardException("there is no piece on source position");
 		}		
 	}
 	
